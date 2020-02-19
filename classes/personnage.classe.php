@@ -8,6 +8,13 @@ class Personnage
 
     // CONSTRUCTOR
 
+    public function __construct($nom, $force, $sante)
+    {
+        $this->setNom($nom);
+        $this->setForce($force);
+        $this->setSante($sante);
+    }
+
     // GETTERS
 
     //  return value Nom
@@ -60,3 +67,8 @@ class Personnage
         $this->sante = $sante;
     }
 }
+
+$perso1 = new Personnage("Robin", 100, 200);
+echo $perso1->getNom();
+echo $perso1->getForce();
+echo $perso1->getSante();

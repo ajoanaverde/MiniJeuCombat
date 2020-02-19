@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <h1>Mini Jeu Combat</h1>
+   <!-- <h1>Mini Jeu Combat</h1>
     <form action="index.php" method="POST">
         <table>
             <tr>
@@ -25,13 +25,16 @@
             </tr>
         </table>
     </form>
-
+-->
     <?php
     require 'classes/utilisateur.class.php';
-
-    $jane = new Utilisateur($_POST['nom'], $_POST['pass']);
-    echo $jane->getName() . '<br>';
-
+    require 'classes/personnage.classe.php';
+    // $jane = new Utilisateur($_POST['nom'], $_POST['pass']);
+    //echo $jane->getName() . '<br>';
+    $perso1 = new Personnage("Robin", 100, 200);
+    echo $perso1->getNom();
+    echo $perso1->getForce();
+    echo $perso1->getSante();
     ?>
 </body>
 
