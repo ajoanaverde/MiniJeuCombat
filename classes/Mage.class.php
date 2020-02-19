@@ -9,9 +9,7 @@ class Mage extends Personnage
 
    public function __construct($nom, $force, $sante, $sortilège, $mana)
    {
-      $this->setNom($nom);
-      $this->setForce($force);
-      $this->setSante($sante);
+      parent::__construct($nom, $force, $sante);
       $this->setSortilège($sortilège);
       $this->setMana($mana);
    }
@@ -57,4 +55,23 @@ class Mage extends Personnage
    {
       $this->mana = $mana;
    }
+
+
+
+   //####################
+   //# SPECIFIC METHODS #
+   //####################
+
+   public function lancerDesSorts(Mage $mage)
+   {
+      echo "Je suis " . $mage->getNom() . " et je me bats";
+   }
 }
+
+$lux = new Mage("Lux", 9999, 200, "Beaucoup Trop", 10);
+echo $lux->getNom();
+echo $lux->getForce();
+echo $lux->getSante();
+echo $lux->getSortilège();
+echo $lux->getMana();
+$lux->lancerDesSorts($lux);
