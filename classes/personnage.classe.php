@@ -66,6 +66,19 @@ class Personnage
     {
         $this->sante = $sante;
     }
+
+    //   SPECIFIC METHODS
+
+    function seDeplacer(Personnage $personnage)
+    {
+        echo "Je suis $personnage->getNom() et je me deplace";
+    }
+
+
+    function parler(Personnage $personnage)
+    {
+        echo "Je suis $personnage->getNom() et je parle";
+    }
 }
 
 $perso1 = new Personnage("Robin", 100, 200);
