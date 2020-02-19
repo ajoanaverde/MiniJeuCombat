@@ -10,13 +10,19 @@ class Personnage
 
     // CONSTRUCTOR
 
-    public function __construct($nom, $force, $sante, $mana, $endurance)
+    public function __construct(array $att)
     {
-        $this->setNom($nom);
-        $this->setForce($force);
-        $this->setSante($sante);
-        $this->setMana($mana);
-        $this->setEndurance($endurance);
+        $this->hydrate($att);
+    }
+
+    // HYDRATE
+    public function hydrate(array $attributes){
+        foreach ($attributes as $key => $value) {
+            $method = "set".ucfirst($key);
+            if (method_exists($this, $method)){
+                $this->{$method}($value);
+            }
+        }
     }
 
     // GETTERS
@@ -104,11 +110,6 @@ class Personnage
 
     //   SPECIFIC METHODS
 
-//    function seDeplacer(Personnage $personnage)
-//    {
-//        echo "Je suis " . $personnage->getNom() . " et je me deplace";
-//    }
-
     public function parler(Personnage $personnage)
     {
         echo "Je suis " . $personnage->getNom() . " et je parle. <br>";
@@ -118,10 +119,9 @@ class Personnage
     {
         echo $personnage->getNom() . " stats : <br> - Santé: " . $personnage->getSante() . "<br>- Mana: " . $personnage->getMana() . "<br>- Endurance: " . $personnage->getEndurance();
     }
-
 }
 
-
+//$perso1 = new Personnage(["nom" => "Jane", "force" => 30, "sante" => 70, "mana" => 20, "endurance" => 90]);
 
 //$perso1 = new Personnage();
 //echo $perso1->getNom();
@@ -129,3 +129,5 @@ class Personnage
 //echo $perso1->getSante();
 //$perso1->seDeplacer($perso1);
 //$perso1->parler($perso1);
+//$perso1->lireStats($perso1);
+// $nom, $force, $sante, $mana, $endurance
