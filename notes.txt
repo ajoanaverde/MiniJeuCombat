@@ -1,3 +1,44 @@
+.Hydratation
+.Hydrater
+
+.Personnage
+$force
+$agilite
+$endurance
+$Vie
+$mana
+$pointsAction
+$race[humain, elfe, orc, nain, lapinCretin]
+$archetype[voleur, archer, magicien, guerrier, moigne]
+
+
+functions
+    - attaquer
+    - boire potion
+    - manger
+    - soigner
+    - se deplacer
+
+(.Race)
+.Humain
+.Elfe
+.Orc
+.Nain
+.LapinCretin
+
+
+(.Archetype)
+.Voleur (nightblade)
+.Archer
+.Magicien
+.Guerrier
+.Moigne
+    - function:
+        - soigne (-mana, +vie)
+
+
+
+
 creer un jeux:
 chaque visiteur peut 
 -creer un personnage, 
@@ -24,4 +65,6 @@ notions utilisées:
         -nom
         -degats
         -id
+
+
         
