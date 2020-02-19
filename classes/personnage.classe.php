@@ -121,9 +121,6 @@ class Personnage
 
 }
 
-$janette = new Personnage("Janette", 10, 60, 10, 100);
-$janette->parler($janette);
-$janette->lireStats($janette);
 
 
 //$perso1 = new Personnage();
