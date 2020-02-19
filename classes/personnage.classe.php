@@ -71,13 +71,12 @@ class Personnage
 
     function seDeplacer(Personnage $personnage)
     {
-        echo "Je suis $personnage->getNom() et je me deplace";
+        echo "Je suis " . $personnage->getNom() . " et je me deplace";
     }
-
 
     function parler(Personnage $personnage)
     {
-        echo "Je suis $personnage->getNom() et je parle";
+        echo "Je suis " . $personnage->getNom() . " et je parle";
     }
 }
 
@@ -85,3 +84,5 @@ $perso1 = new Personnage("Robin", 100, 200);
 echo $perso1->getNom();
 echo $perso1->getForce();
 echo $perso1->getSante();
+$perso1->seDeplacer($perso1);
+$perso1->parler($perso1);
