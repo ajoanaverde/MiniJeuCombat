@@ -1,0 +1,27 @@
+creer un jeux:
+chaque visiteur peut 
+-creer un personnage, 
+avec lequel il pourra
+-frapper d'autres personnages
+- le personnage frappé se verra infliger des dégâts
+
+chaque personnage a 2 caracteristiques:
+- nom (unique)
+- degats (0-100)
+        - à 100 le perso est mort et suprime
+
+
+
+notions utilisées:
+    - attributs et methodes
+    - instanciation de la classe
+    - constantes de classe
+    - manip des donnees stockées
+
+
+- table personnages
+    - avec des differents champs (ses caracteristiques)
+        -nom
+        -degats
+        -id
+        
